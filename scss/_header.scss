@@ -1,0 +1,118 @@
+/*=================  H  E  A  D  E  R  ==================*/
+
+/*=================ЛОГОТИП,  ВЕРХНЕЕ СЕРОЕ МЕНЮ, ТЕЛЕФОН==================*/
+
+.block {
+	display: flex;
+	max-width: $mw + px;
+	margin: auto;
+	// .block__greymenu
+
+	&__greymenu {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		
+
+		// .block__greymenu_left
+		&_left {
+			display: flex;
+			height: 75px;
+			flex-wrap: wrap;
+		}
+		&_left {
+			@media (max-width: 767px) {
+				display: none;
+				
+			}
+		}
+		
+		// .block__greymenu_right
+		&_right {
+			display: flex;
+			height: 75px;
+			flex-wrap: nowrap;
+			
+			
+		}
+		&_right {
+			@media (max-width: 505px) {
+				display: none;
+			}
+			
+		}
+	}
+
+	// .block__element
+
+	&__element {
+		font-family: Graphik;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		line-height: 13px;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		color: #8890a1;
+		margin: 45px 40px 0px 0px;
+		white-space: nowrap;
+		
+	}
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.header {
+	// .header__logo
+
+	&__logo {
+		display: flex;
+		width: 48px;
+		height: 48px;
+		border-radius: 50%;
+		background-image: url(../img/logo.png);
+		margin: 15px 51px 12px 0px;
+		align-content: center;
+	}
+}
+
+
+.block {
+	// .block__fhone
+
+	&__fhone {
+		display: flex;
+		margin-right: 0px;
+	}
+}
+
+.content {
+	// .content__fhone
+
+	&__fhone {
+		display: flex;
+		color: #ff5d39;
+		font-weight: 500;
+		white-space: nowrap;
+		@media (max-width: 355px) {
+			display: none;
+		}
+	}
+}
+a:hover {
+	color: #003db1;
+
+}
+
+
+/*========================РАЗДЕЛЯЮЩАЯ ЛИНИЯ========================*/
+hr {
+	padding: 0;
+	border: none;
+	background-color: rgba(136, 144, 161, 0.2);
+	height: 1px;
+}
+
+/*===================== КОНЕЦ  H E A D E R ========================*/

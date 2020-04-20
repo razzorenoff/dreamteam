@@ -1,0 +1,116 @@
+/*================ ВЫПАДАЮЩЕЕ М Е Н Ю =================*/
+
+.menu {
+	position: relative;
+	font-family: Graphik;
+	font-style: normal;
+	font-size: 14px;
+	line-height: 14px;
+	margin: 23px 0px 17px 0px;
+	text-decoration: none;
+	
+
+	// .menu__list
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		@media (max-width: $md1+px) {
+			max-width: 970px; 
+		}
+		@media (max-width: $md2+px) {
+			max-width: 750px;
+		}
+		@media (max-width: $md3+px) {
+			max-width: none;
+			padding: 0 10px;
+		}
+	}
+
+	// .menu__link
+
+	&__link {
+		font-weight: 500;
+		color: rgb(0, 0, 0);
+		margin: 0px 48px 0px 0px;
+		
+	}
+}
+
+.sub-menu {
+	// .sub-menu__list
+
+	&__list {
+		display: none;
+		position: absolute;
+		left: 0;
+		top: 14px;
+		background-color: white;
+		height: 395px;
+		width: 100% ;
+		box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
+		
+		//border: 1px solid green;
+		hr{
+			margin: 17px 0px 20px 0px;
+		}
+
+	}
+
+	// .sub-menu__collumn
+
+	&__collumn {
+		display: flex;
+		flex-direction: column;
+		//border: 1px solid green;
+		
+	}
+
+	// .sub-menu__link
+
+	&__link {
+		font-weight: 200;
+		color: #003db1;
+		line-height: 3em;
+		font-size: 14px;
+		
+	}
+
+}
+.list {
+	// .list__collumn
+
+	&__collumn {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		
+		//border: 1px solid blue;
+	}
+}
+
+.h3 {
+	color: black;
+	font-weight: 500;
+	text-align: center;
+	margin: 13px 0px 22px 0px;
+}
+.button {
+	background-color: #003db1;
+	width: 270px;
+	height: 70px;
+	color: white;
+	font-size: 1.2em;
+	align-items: flex-end;
+}
+
+
+body.mouse .menu__list > li:hover .sub-menu__list {
+	display: block;
+}
+
+body.touch .sub-menu__list.open {
+	display: block;
+}
+/*====================   К О Н Е Ц  ВЫПАДАЮЩЕГО М Е Н Ю =======================*/

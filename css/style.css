@@ -699,12 +699,12 @@ body.touch .sub-menu__list.open {
 }
 
 .sidebar-element-1 {
-  background: url(./img/capitel.png) #f4f4f6 no-repeat right bottom;
+  background: url(../img/capitel.png) #f4f4f6 no-repeat right bottom;
   max-width: 370px;
 }
 
 .sidebar-element-2 {
-  background: url(./img/top3.png) #f4f4f6 no-repeat right bottom;
+  background: url(../img/top3.png) #f4f4f6 no-repeat right bottom;
   max-width: 370px;
 }
 
@@ -730,7 +730,7 @@ body.touch .sub-menu__list.open {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  color: #8890A1;
+  color: #8890a1;
   margin-bottom: 145px;
 }
 
