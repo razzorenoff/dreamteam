@@ -208,7 +208,7 @@ a {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background-image: url(./img/logo.png);
+  background-image: url(../img/logo.png);
   margin: 15px 51px 12px 0px;
   -ms-flex-line-pack: center;
       align-content: center;
