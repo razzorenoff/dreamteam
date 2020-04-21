@@ -137,6 +137,7 @@ body.lock {
 /*=================ЛОГОТИП,  ВЕРХНЕЕ СЕРОЕ МЕНЮ, ТЕЛЕФОН==================*/
 .block {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   max-width: 1170px;
@@ -145,21 +146,25 @@ body.lock {
 
 .block__greymenu {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
 .block__greymenu_left {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   height: 75px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
 
 @media (max-width: 767px) {
@@ -170,11 +175,13 @@ body.lock {
 
 .block__greymenu_right {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   height: 75px;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
 }
 
 @media (max-width: 505px) {
@@ -203,19 +210,23 @@ a {
 
 .header__logo {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   width: 48px;
   height: 48px;
-  border-radius: 50%;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
   background-image: url(../img/logo.png);
   margin: 15px 51px 12px 0px;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
 }
 
 .block__fhone {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   margin-right: 0px;
@@ -223,6 +234,7 @@ a {
 
 .content__fhone {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   color: #ff5d39;
@@ -251,16 +263,14 @@ hr {
 /*===================== КОНЕЦ  H E A D E R ========================*/
 /* ================= ФОРМА ПОИСКА ================= */
 .block__search {
+  position: absolute;
   width: 200px;
   height: 31px;
   margin: -9px -8px -10px 300px;
   padding: none;
-}
-
-@media (max-width: 1030px) {
-  .block__search {
-    display: none;
-  }
+  /*	@media (max-width: 1030px) {
+		display: none;
+	}*/
 }
 
 .fa-search {
@@ -269,6 +279,7 @@ hr {
   margin-left: 177px;
   color: #8890a1;
   -webkit-transition: all 0.55s ease;
+  -o-transition: all 0.55s ease;
   transition: all 0.55s ease;
 }
 
@@ -287,8 +298,10 @@ hr {
   padding-right: 27px;
   text-align: center;
   color: rgba(136, 144, 161, 0.2);
-  border-radius: 15px;
+  -webkit-border-radius: 15px;
+          border-radius: 15px;
   -webkit-transition: width 0.55s ease-out, background 0.55s linear;
+  -o-transition: width 0.55s ease-out, background 0.55s linear;
   transition: width 0.55s ease-out, background 0.55s linear;
 }
 
@@ -306,6 +319,7 @@ hr {
 .container-1:hover .icon {
   color: #003db1;
   -webkit-transform: scale(1.5);
+      -ms-transform: scale(1.5);
           transform: scale(1.5);
 }
 
@@ -322,14 +336,9 @@ hr {
 }
 
 .menu__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
 
 @media (max-width: 1182px) {
@@ -375,10 +384,12 @@ hr {
 
 .sub-menu__collumn {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
 }
@@ -392,13 +403,16 @@ hr {
 
 .list__collumn {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
@@ -417,6 +431,7 @@ hr {
   color: white;
   font-size: 1.2em;
   -webkit-box-align: end;
+  -webkit-align-items: flex-end;
       -ms-flex-align: end;
           align-items: flex-end;
 }
@@ -442,14 +457,17 @@ body.touch .sub-menu__list.open {
 
 .mainscreen .slider {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 590px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
   font-family: Graphik;
@@ -480,8 +498,9 @@ body.touch .sub-menu__list.open {
 }
 
 .mainscreen .content-slider__right {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  -webkit-align-self: flex-end;
+      -ms-flex-item-align: end;
+          align-self: flex-end;
 }
 
 .mainscreen .slider__image {
@@ -498,25 +517,31 @@ body.touch .sub-menu__list.open {
 
 /*============== блоки БРОКЕРСКОЕ ОБСЛУЖИВАНИЕ и ЕВРООБЛИГАЦИИ ============*/
 .fotolink-content {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
 .fotolink-content .block-and-arrow {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   max-width: 570px;
@@ -526,6 +551,7 @@ body.touch .sub-menu__list.open {
 
 .fotolink-content .block-and-arrow .fotolink-left {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   background: #acaccd;
@@ -533,6 +559,7 @@ body.touch .sub-menu__list.open {
 
 .fotolink-content .block-and-arrow .fotolink-right {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   background: #bea08b;
@@ -563,9 +590,11 @@ body.touch .sub-menu__list.open {
 
 .block-arrow {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   background: rgba(136, 144, 161, 0.1);
@@ -581,9 +610,11 @@ body.touch .sub-menu__list.open {
 /*=======заголовки блоков КУРС валют и МОНЕТЫ*=======*/
 .container-title {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
@@ -591,6 +622,7 @@ body.touch .sub-menu__list.open {
 .container-title .exchange-monets-title {
   max-width: 570px;
   -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   font-size: 18px;
@@ -598,6 +630,7 @@ body.touch .sub-menu__list.open {
 
 .container-title .exchange-monets-title .block-first-title {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   margin: 50px 0px 20px 0px;
@@ -627,28 +660,35 @@ body.touch .sub-menu__list.open {
 /*============= блок КАРТЫ =============*/
 .block-cards {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   background: rgba(136, 144, 161, 0.1);
   margin: 80px 0px 80px 0px;
-  -ms-flex-item-align: center;
-      align-self: center;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
 }
 
 .slider-left {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 40px 40px 40px 40px;
@@ -666,9 +706,11 @@ body.touch .sub-menu__list.open {
 /*========= сайдбар 1 ======*/
 .sidebar-row {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 30px;
@@ -677,6 +719,7 @@ body.touch .sub-menu__list.open {
 
 .sidebar-column {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   background: #f4f4f6;
@@ -689,13 +732,16 @@ body.touch .sub-menu__list.open {
 
 .sidebar-foto {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  -webkit-align-self: flex-end;
+      -ms-flex-item-align: end;
+          align-self: flex-end;
 }
 
 .sidebar-element-1 {
@@ -725,9 +771,11 @@ body.touch .sub-menu__list.open {
 
 .rss-row {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   color: #8890a1;
@@ -736,6 +784,7 @@ body.touch .sub-menu__list.open {
 
 .rss-column {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
@@ -762,19 +811,23 @@ body.touch .sub-menu__list.open {
 
 .footer-column {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
 .footer-link {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   max-width: 230px;

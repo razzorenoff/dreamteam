@@ -3,14 +3,15 @@
 .block__search {
 	//border: 1px solid blue;
 	//display: none;
+	position: absolute;
 	width: 200px;
 	height: 31px;
 	margin: -9px -8px -10px 300px;
 	padding: none;
 
-	@media (max-width: 1030px) {
+	/*	@media (max-width: 1030px) {
 		display: none;
-	}
+	}*/
 }
 
 //.fa {
@@ -44,7 +45,6 @@
 	color: rgba(136, 144, 161, 0.2);
 	border-radius: 15px;
 	transition: width 0.55s ease-out, background 0.55s linear;
-	
 }
 
 .container-1 input#search:focus,
