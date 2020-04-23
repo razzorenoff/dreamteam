@@ -1,5 +1,9 @@
 /*================ ВЫПАДАЮЩЕЕ М Е Н Ю =================*/
-
+.header2{
+	display: flex;
+	justify-content: space-between;
+	max-width: 1170px;
+}
 .menu {
 	position: relative;
 	font-family: Graphik;
@@ -13,7 +17,7 @@
 	// .menu__list
 
 	&__list {
-		//display: flex;
+		display: flex;
 		//justify-content: flex-start;
 		flex-wrap: wrap;
 		@media (max-width: $md1+px) {
