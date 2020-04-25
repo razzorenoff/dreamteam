@@ -1,8 +1,8 @@
 /*================ ВЫПАДАЮЩЕЕ М Е Н Ю =================*/
 .header2{
-	display: flex;
+	display: absolute;
 	justify-content: space-between;
-	max-width: 1170px;
+	//max-width: 1170px;
 }
 .menu {
 	position: relative;

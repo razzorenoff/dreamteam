@@ -3,7 +3,7 @@
 .block__search {
 	//border: 1px solid blue;
 	//display: none;
-	position: absolute;
+	position: relative;
 	width: 200px;
 	height: 31px;
 	margin: -9px -8px -10px 300px;
@@ -21,9 +21,10 @@
 	//border: 1px solid blue;
 	position: absolute;
 	margin-top: 8px;
-	margin-left: 177px;
+	//margin-left: 177px;
 	color: #8890a1;
 	transition: all 0.55s ease;
+	z-index: 1;
 }
 
 .container-1 {

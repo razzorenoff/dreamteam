@@ -263,7 +263,7 @@ hr {
 /*===================== КОНЕЦ  H E A D E R ========================*/
 /* ================= ФОРМА ПОИСКА ================= */
 .block__search {
-  position: absolute;
+  position: relative;
   width: 200px;
   height: 31px;
   margin: -9px -8px -10px 300px;
@@ -276,11 +276,11 @@ hr {
 .fa-search {
   position: absolute;
   margin-top: 8px;
-  margin-left: 177px;
   color: #8890a1;
   -webkit-transition: all 0.55s ease;
   -o-transition: all 0.55s ease;
   transition: all 0.55s ease;
+  z-index: 1;
 }
 
 .container-1 {
@@ -326,15 +326,11 @@ hr {
 /* ================= КОНЕЦ ФОРМЫ ПОИСКА ================= */
 /*================ ВЫПАДАЮЩЕЕ М Е Н Ю =================*/
 .header2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: absolute;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  max-width: 1170px;
 }
 
 .menu {
