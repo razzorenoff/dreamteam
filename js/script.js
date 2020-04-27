@@ -1,33 +1,33 @@
 let isMobile = {
-	Android: function() {return navigator.userAgent.match(/Android/i);},
-	BlackBerry: function() {return navigator.userAgent.match(/BlackBerry/i);},
-	iOS: function() {return navigator.userAgent.match(/iPhone|iPad|iPod/i);},
-	Opera: function() {return navigator.userAgent.match(/Opera Mini/i);},
-	Windows: function() {return navigator.userAgent.match(/IEMobile/i);},
-	any: function() {return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());}
+	Android: function () { return navigator.userAgent.match(/Android/i); },
+	BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); },
+	iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); },
+	Opera: function () { return navigator.userAgent.match(/Opera Mini/i); },
+	Windows: function () { return navigator.userAgent.match(/IEMobile/i); },
+	any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); }
 };
-		let body=document.querySelector('body');
-if(isMobile.any()){
-		body.classList.add('touch');
-		let link=document.querySelectorAll('.link');
-	for(i=0; i<link.length; i++){
-			let thisLink=link[i].previousElementSibling;
-			let subMenu=link[i].nextElementSibling;
-			let thislink=link[i];
+let body = document.querySelector('body');
+if (isMobile.any()) {
+	body.classList.add('touch');
+	let arrow = document.querySelectorAll('.arrow');
+	for (i = 0; i < arrow.length; i++) {
+		let thisLink = arrow[i].previousElementSibling;
+		let subMenu = arrow[i].nextElementSibling;
+		let thisArrow = arrow[i];
 
-			thisLink.classList.add('menu');
-		link[i].addEventListener('click', function(){
+		thisLink.classList.add('parent');
+		arrow[i].addEventListener('click', function () {
 			subMenu.classList.toggle('open');
-			thislink.classList.toggle('active');
+			thisArrow.classList.toggle('active');
 		});
 	}
-}else{
+} else {
 	body.classList.add('mouse');
 }
 
 $(document).ready(function () {
-	$('.header__burger').click(function (event) {
-		$('.header__burger,.header__menu').toggleClass('active');
+	$('.header-burger').click(function (event) {
+		$('.header-burger,.header-menu').toggleClass('active');
 		$('body').toggleClass('lock');
 	});
 });
