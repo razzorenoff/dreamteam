@@ -1,67 +1,36 @@
 /* ================= ФОРМА ПОИСКА ================= */
 
-.block__search {
-	//border: 1px solid blue;
-	//display: none;
+form {
+	flex: 1 1 auto;
 	position: relative;
-	width: 200px;
-	height: 31px;
-	margin: -9px -8px -10px 300px;
-	padding: none;
-
-	/*	@media (max-width: 1030px) {
-		display: none;
-	}*/
 }
-
-//.fa {
-//border: 1px solid blue;
-//}
-.fa-search {
-	//border: 1px solid blue;
+input {
+	width: 0;
+	padding: 0 30px 0 0px;
+	background: none;
+	transition: 0.4s cubic-bezier(0, 0.8, 0, 1);
 	position: absolute;
-	margin-top: 8px;
-	//margin-left: 177px;
-	color: #8890a1;
-	transition: all 0.55s ease;
+	top: 0;
+	right: 0;
+	z-index: 2;
+}
+input:focus {
+	width: 100px;
 	z-index: 1;
+	border-bottom: 1px solid rgba(136, 144, 161, 0.2);
 }
-
-.container-1 {
-	//border: 1px solid blue;
-	width: 200px;
-	white-space: nowrap;
+.buttonsearch {
+	background: transparent;
 	position: absolute;
+	top: 0;
+	right: 0;
+	cursor: pointer;
 }
-.container-1 input#search {
-	width: 40px;
-	height: 28px;
-	//background: white;
-	//border: 1px solid blue;
-	float: right;
-	font-family: Graphik;
-	font-size: 12px;
-	padding-right: 27px;
-	text-align: center;
-	color: rgba(136, 144, 161, 0.2);
-	border-radius: 15px;
-	transition: width 0.55s ease-out, background 0.55s linear;
-}
-
-.container-1 input#search:focus,
-.container-1 input#search:active {
-	outline: none;
-	width: 200px;
-}
-
-.container-1:hover input#search {
-	width: 200px;
-	background: rgba(136, 144, 161, 0.2);
-}
-
-.container-1:hover .icon {
-	color: #003db1;
-	transform: scale(1.5);
+.buttonsearch:before {
+	content: "\f002";
+	font-family: FontAwesome;
+	font-size: 14px;
+	color: #8890A1;
 }
 
 /* ================= КОНЕЦ ФОРМЫ ПОИСКА ================= */

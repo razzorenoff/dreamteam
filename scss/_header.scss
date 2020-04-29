@@ -4,7 +4,6 @@
 
 .block {
 	display: flex;
-	max-width: $mw + px;
 	margin: auto;
 	// .block__greymenu
 
@@ -20,12 +19,8 @@
 			height: 75px;
 			flex-wrap: wrap;
 		}
-		&_left {
-			@media (max-width: 767px) {
-				display: none;
 				
-			}
-		}
+		
 		
 		// .block__greymenu_right
 		&_right {
@@ -33,12 +28,6 @@
 			height: 75px;
 			flex-wrap: nowrap;
 			
-			
-		}
-		&_right {
-			@media (max-width: 505px) {
-				display: none;
-			}
 			
 		}
 	}
@@ -96,9 +85,6 @@ a {
 		color: #ff5d39;
 		font-weight: 500;
 		white-space: nowrap;
-		@media (max-width: 355px) {
-			display: none;
-		}
 	}
 }
 a:hover {
